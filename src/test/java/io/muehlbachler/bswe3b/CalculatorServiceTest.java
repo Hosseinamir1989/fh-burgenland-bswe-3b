@@ -25,7 +25,7 @@ public class CalculatorServiceTest {
 
     @Test
     public void testDivideByNegativeNumber() {
-        assertEquals(-5, calc.divide(10, -2), "10/-2 should be -5");
+        assertEquals(-5, calc.divide(10, -2), "10/-2 should be 0");
     }
 
     @Test
