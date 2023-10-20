@@ -12,4 +12,24 @@ public class CalculatorServiceTest {
     }
 
     // FIXME: implement more tests
+
+    @Test
+    public void testDividePositiveNumberWithRemainder() {
+        assertEquals(2, calc.divide(5, 2), "5/2 should be 2, considering integer division");
+    }
+
+    @Test
+    public void testDivideByZero() {
+        assertThrows(ArithmeticException.class, () -> calc.divide(10, 0), "Dividing by zero should throw ArithmeticException");
+    }
+
+    @Test
+    public void testDivideByNegativeNumber() {
+        assertEquals(-5, calc.divide(10, -2), "10/-2 should be -5");
+    }
+
+    @Test
+    public void testDivideNegativeByPositive() {
+        assertEquals(-5, calc.divide(-10, 2), "-10/2 should be -5");
+    }
 }
